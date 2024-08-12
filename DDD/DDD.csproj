@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>gmafffff.СтартовыйНабор.DDD</RootNamespace>
+        <AssemblyName>gmafffff.StarterKit.DDD</AssemblyName>
+        <Authors>FFFFF</Authors>
+        <Product>gmafffff.StarterKit</Product>
+        <PackageId>gmafffff.StarterKit.DDD</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <DefineConstants>TRACECOREAPPCOREAPP;CONTRACTS_FULL</DefineConstants>
+        <OutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\ddd\bin\Debug\</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <OutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\ddd\bin\Release\</OutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DotNext.Metaprogramming" Version="5.7.0"/>
+        <PackageReference Include="FluentResults" Version="3.16.0"/>
+        <PackageReference Include="JetBrains.Annotations" Version="2024.2.0"/>
+        <PackageReference Include="Light.GuardClauses" Version="11.0.0"/>
+        <PackageReference Include="MediatR" Version="12.4.0"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Напильник\Напильник.csproj"/>
+    </ItemGroup>
+
+</Project>
