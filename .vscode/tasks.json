@@ -1,0 +1,59 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Restore from cashe",
+            "type": "shell",
+            "command": "dotnet restore --source %USERPROFILE%\\.nuget\\packages",
+            "group": "none",
+            "problemMatcher": [],
+        },
+        {
+            "label": "Clean",
+            "type": "dotnet",
+            "task": "clean",
+            "group": "build",
+            "problemMatcher": [],
+        },
+        {
+            "label": "Build Напильник",
+            "type": "dotnet",
+            "task": "build Напильник\\Напильник.csproj",
+            "file": "Напильник\\Напильник.csproj",
+            "group": "build",
+            "problemMatcher": [],
+        },
+        {
+            "label": "Build Напильник.Тесты",
+            "type": "dotnet",
+            "task": "build Напильник.Тесты\\Напильник.Тесты.csproj",
+            "file": "Напильник.Тесты\\Напильник.Тесты.csproj",
+            "group": "build",
+            "problemMatcher": [],
+        },
+        {
+            "label": "Rebuild all",
+            "type": "dotnet",
+            "task": "build",
+            "dependsOrder": "sequence",
+            "dependsOn":["Clean"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+        },
+        {
+            "label": "Build all",
+            "type": "dotnet",
+            "task": "build",
+            "dependsOrder": "sequence",
+            "dependsOn":[],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+        }
+    ]
+}

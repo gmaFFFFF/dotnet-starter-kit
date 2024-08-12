@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        
+        {
+            "name": "C#: Напильник.Тесты",
+            "preLaunchTask": "Build all",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}\\Напильник.Тесты\\Напильник.Тесты.csproj",
+            "launchConfigurationId": "TargetFramework=;Напильник.Тесты"
+        }
+    ]
+}

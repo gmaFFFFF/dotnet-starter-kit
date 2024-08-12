@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>gmafffff.СтартовыйНабор.Напильник</RootNamespace>
+        <AssemblyName>gmafffff.StarterKit.Needle</AssemblyName>
+        <Authors>FFFFF</Authors>
+        <Product>gmafffff.StarterKit</Product>
+        <PackageId>gmafffff.StarterKit.Needle</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <OutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\needle\bin\debug\</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <OutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\needle\bin\release\</OutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoFixture" Version="4.18.1"/>
+        <PackageReference Include="FluentResults" Version="3.16.0"/>
+        <PackageReference Include="JetBrains.Annotations" Version="2024.2.0"/>
+        <PackageReference Include="Light.GuardClauses" Version="11.0.0"/>
+        <PackageReference Include="Microsoft.Reactive.Testing" Version="6.0.1"/>
+        <PackageReference Include="NMoneys" Version="7.3.0"/>
+        <PackageReference Include="RedStar.Amounts" Version="4.2.0"/>
+        <PackageReference Include="System.Reactive" Version="6.0.1"/>
+    </ItemGroup>
+
+</Project>
