@@ -12,12 +12,8 @@
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <OutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\needle.tests\bin\debug\</OutputPath>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-        <OutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\needle.tests\bin\release\</OutputPath>
+    <PropertyGroup>
+        <BaseOutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\Needle.Tests\bin\</BaseOutputPath>
     </PropertyGroup>
 
     <ItemGroup>

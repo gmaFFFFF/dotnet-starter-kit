@@ -2,21 +2,24 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace>gmafffff.СтартовыйНабор.Напильник</RootNamespace>
         <AssemblyName>gmafffff.StarterKit.Needle</AssemblyName>
-        <Authors>FFFFF</Authors>
+    </PropertyGroup>
+
+    <PropertyGroup>
         <Product>gmafffff.StarterKit</Product>
+        <NeutralLanguage>ru</NeutralLanguage>
+    </PropertyGroup>
+
+    <PropertyGroup>
         <PackageId>gmafffff.StarterKit.Needle</PackageId>
+        <Authors>Гришкин Максим</Authors>
     </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <OutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\needle\bin\debug\</OutputPath>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-        <OutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\needle\bin\release\</OutputPath>
+    <PropertyGroup>
+        <BaseOutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\Needle\bin\</BaseOutputPath>
     </PropertyGroup>
 
     <ItemGroup>

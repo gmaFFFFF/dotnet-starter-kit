@@ -11,13 +11,8 @@
         <PackageId>gmafffff.StarterKit.DDD</PackageId>
     </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <DefineConstants>TRACECOREAPPCOREAPP;CONTRACTS_FULL</DefineConstants>
-        <OutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\ddd\bin\Debug\</OutputPath>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-        <OutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\ddd\bin\Release\</OutputPath>
+    <PropertyGroup>
+        <BaseOutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\DDD\bin\</BaseOutputPath>
     </PropertyGroup>
 
     <ItemGroup>

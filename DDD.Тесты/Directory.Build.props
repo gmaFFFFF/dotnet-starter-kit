@@ -1,0 +1,5 @@
+<Project>
+    <PropertyGroup>
+        <BaseIntermediateOutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\DDD.Tests\obj\</BaseIntermediateOutputPath>
+    </PropertyGroup>
+</Project>

@@ -12,12 +12,8 @@
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <OutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\ddd.tests\bin\Debug\</OutputPath>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-        <OutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\ddd.tests\bin\Release\</OutputPath>
+    <PropertyGroup>
+        <BaseOutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\DDD.Tests\bin\</BaseOutputPath>
     </PropertyGroup>
 
     <ItemGroup>

@@ -1,0 +1,5 @@
+<Project>
+    <PropertyGroup>
+        <BaseIntermediateOutputPath>$(USERPROFILE)\RiderProjects\gmafffff.starterKit\Needle\obj\</BaseIntermediateOutputPath>
+    </PropertyGroup>
+</Project>
