@@ -43,6 +43,28 @@ public class Exceptional {
     public static Exceptional<Т> From<Т>(Func<Т> factory) {
         return new Exceptional<Т>(factory);
     }
+
+    public static IEnumerable<Exceptional<Т>> From<Т>(IEnumerable<Т> перечисление) {
+        using var перечислитель = перечисление.GetEnumerator();
+        var дальшеЛи = true;
+        Exception? exc = null;
+
+        while (дальшеЛи) {
+            try {
+                дальшеЛи = перечислитель.MoveNext();
+                if (!дальшеЛи)
+                    yield break;
+            }
+            catch (Exception e) {
+                exc = e;
+                break;
+            }
+
+            yield return перечислитель.Current.ToExceptional();
+        }
+
+        yield return From<Т>(exc);
+    }
 }
 
 public class Exceptional<Т> {
@@ -86,6 +108,10 @@ public static class ExceptionalExtensions {
         return Exceptional.From(value);
     }
 
+    public static IEnumerable<Exceptional<Т>> ToExceptional<Т>(this IEnumerable<Т> value) {
+        return Exceptional.From(value);
+    }
+
     public static Exceptional<Т> ToExceptional<Т>(this Func<Т> factory) {
         return Exceptional.From(factory);
     }
@@ -116,5 +142,11 @@ public static class ExceptionalExtensions {
     public static IObservable<Exceptional<Т2>>
         SelectMany<Т, Т2>(this IObservable<Т> source, Func<Т, Exceptional<Т2>> k) {
         return source.Select(k);
+    }
+
+    public static Т2 Match<Т, Т2>(this Exceptional<Т> value, Func<Т, Т2> ifSucc, Func<Exception, Т2> ifFail) {
+        ArgumentNullException.ThrowIfNull(ifSucc, nameof(ifSucc));
+        ArgumentNullException.ThrowIfNull(ifFail, nameof(ifFail));
+        return value.HasException ? ifFail(value.Exception!) : ifSucc(value.Value!);
     }
 }
